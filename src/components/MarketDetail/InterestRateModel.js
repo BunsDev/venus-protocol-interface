@@ -14,8 +14,8 @@ import {
   Tooltip,
   ResponsiveContainer
 } from 'recharts';
-import { useMarkets } from '../../hooks/useMarkets';
 import * as constants from 'utilities/constants';
+import { useMarkets } from '../../hooks/useMarkets';
 import useWeb3 from '../../hooks/useWeb3';
 import {
   getInterestModelContract,

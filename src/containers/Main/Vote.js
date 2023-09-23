@@ -6,7 +6,6 @@ import BigNumber from 'bignumber.js';
 import { compose } from 'recompose';
 import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
-import { connectAccount, accountActionCreators } from 'core';
 import MainLayout from 'containers/Layout/MainLayout';
 import CoinInfo from 'components/Vote/CoinInfo';
 import VotingWallet from 'components/Vote/VotingWallet';
@@ -19,6 +18,7 @@ import {
   CONTRACT_VBEP_ADDRESS
 } from 'utilities/constants';
 import { useWeb3React } from '@web3-react/core';
+import { connectAccount, accountActionCreators } from '../../core';
 import useRefresh from '../../hooks/useRefresh';
 import {
   useComptroller,

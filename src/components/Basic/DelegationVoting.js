@@ -96,7 +96,6 @@ const VotingWrapper = styled.div`
       }
     }
   }
-
 `;
 
 function DelegationVoting({ history, isLoading, onDelegate }) {

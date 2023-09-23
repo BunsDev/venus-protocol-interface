@@ -6,7 +6,6 @@ import BigNumber from 'bignumber.js';
 import { compose } from 'recompose';
 import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
-import { connectAccount, accountActionCreators } from 'core';
 import ProposerInfo from 'components/Vote/ProposerDetail/ProposerInfo';
 import Holding from 'components/Vote/ProposerDetail/Holding';
 import Transactions from 'components/Vote/ProposerDetail/Transactions';
@@ -14,6 +13,7 @@ import VotingHistory from 'components/Vote/ProposerDetail/VotingHistory';
 import MainLayout from 'containers/Layout/MainLayout';
 import { promisify } from 'utilities';
 import { Row, Column } from 'components/Basic/Style';
+import { connectAccount, accountActionCreators } from '../../core';
 
 const ProposerDetailWrapper = styled.div`
   width: 100%;

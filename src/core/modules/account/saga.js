@@ -193,8 +193,9 @@ export function* asyncGetTransactionHistoryRequest({
   const { offset, event, type } = payload;
   try {
     const response = yield call(restService, {
-      api: `/transactions?page=${offset || 0}${event !== 'All' ?
-        '&event=' + event : ''}`,
+      api: `/transactions?page=${offset || 0}${
+        event !== 'All' ? `&event=${event}` : ''
+      }`,
       method: 'GET',
       params: {}
     });
@@ -207,11 +208,7 @@ export function* asyncGetTransactionHistoryRequest({
     reject(e);
   }
 }
-export function* asyncGetTreasuryBalanceRequest({
-  payload,
-  resolve,
-  reject
-}) {
+export function* asyncGetTreasuryBalanceRequest({ payload, resolve, reject }) {
   try {
     const response = yield call(restService, {
       api: `/treasury/balance`,
@@ -309,6 +306,6 @@ export default function*() {
     fork(watchGetVoterHistoryRequest),
     fork(watchGetVoterAccountsRequest),
     fork(watchGetTransactionHistoryRequest),
-    fork(watchGetTreasuryBalanceRequest),
+    fork(watchGetTreasuryBalanceRequest)
   ]);
 }

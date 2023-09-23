@@ -73,8 +73,7 @@ function MarketInfo({ marketInfo, marketType }) {
                 ? formatApy(
                     new BigNumber(
                       +marketInfo.supplyApy < 0.01 ? 0.01 : marketInfo.supplyApy
-                    )
-                    .plus(
+                    ).plus(
                       new BigNumber(
                         +marketInfo.supplyVenusApy < 0.01
                           ? 0.01
@@ -84,9 +83,10 @@ function MarketInfo({ marketInfo, marketType }) {
                   )
                 : formatApy(
                     new BigNumber(
-                      Math.abs(+marketInfo.borrowApy) < 0.01 ? 0.01 : marketInfo.borrowApy
-                    )
-                    .plus(
+                      Math.abs(+marketInfo.borrowApy) < 0.01
+                        ? 0.01
+                        : marketInfo.borrowApy
+                    ).plus(
                       new BigNumber(
                         marketInfo.borrowVenusApy < 0.01
                           ? 0.01
@@ -98,7 +98,7 @@ function MarketInfo({ marketInfo, marketType }) {
           </div>
           <div className="supply-apy">
             <p className="label right">
-              {marketType === 'supply'? "Supply APY" : "Borrow Apy"}
+              {marketType === 'supply' ? 'Supply APY' : 'Borrow Apy'}
             </p>
             <p className="value right">
               {marketType === 'supply'
@@ -108,7 +108,9 @@ function MarketInfo({ marketInfo, marketType }) {
                     .dp(2, 1)
                     .toString(10)
                 : new BigNumber(
-                    Math.abs(+marketInfo.borrowApy) < 0.01 ? 0.01 : marketInfo.borrowApy
+                    Math.abs(+marketInfo.borrowApy) < 0.01
+                      ? 0.01
+                      : marketInfo.borrowApy
                   )
                     .dp(2, 1)
                     .toString(10)}
@@ -135,7 +137,7 @@ function MarketInfo({ marketInfo, marketType }) {
           </div>
           <div className="total-supply">
             <p className="label right">
-              {marketType === 'supply'? "Total Supply" : "Total Borrow"}
+              {marketType === 'supply' ? 'Total Supply' : 'Total Borrow'}
             </p>
             <p className="value right">
               $

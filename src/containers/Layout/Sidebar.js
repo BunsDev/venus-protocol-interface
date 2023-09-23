@@ -441,6 +441,7 @@ function Sidebar({ history, settings, setSetting, getGovernanceVenus }) {
           className="flex flex-start align-center"
           href="https://prdt.finance/XVS"
           active-class-name="active"
+          rel="noreferrer"
         >
           <img src={prdtImg} alt="prdt" className="outlink-icon" />
           <Label primary>XVS Prediction</Label>
@@ -451,6 +452,7 @@ function Sidebar({ history, settings, setSetting, getGovernanceVenus }) {
           className="flex flex-start align-center"
           href="https://community.venus.io"
           active-class-name="active"
+          rel="noreferrer"
         >
           <Icon type="team" className="outlink-icon" />
           <Label primary>Forum</Label>

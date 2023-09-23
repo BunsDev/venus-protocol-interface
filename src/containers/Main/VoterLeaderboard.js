@@ -8,9 +8,9 @@ import { bindActionCreators } from 'redux';
 import commaNumber from 'comma-number';
 import { Row, Col } from 'antd';
 import styled from 'styled-components';
-import { connectAccount, accountActionCreators } from 'core';
 import MainLayout from 'containers/Layout/MainLayout';
 import { promisify } from 'utilities';
+import { connectAccount, accountActionCreators } from '../../core';
 
 const LeaderboardWrapper = styled.div`
   width: 100%;

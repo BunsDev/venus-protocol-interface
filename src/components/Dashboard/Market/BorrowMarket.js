@@ -63,13 +63,17 @@ function BorrowMarket({ borrowedAssets, remainAssets, settings }) {
         return {
           children: (
             <div className="apy-content">
-              {!settings.withXVS || apy.isNegative() ?
+              {!settings.withXVS || apy.isNegative() ? (
                 <Icon type="arrow-down" style={{ color: '#f9053e' }} />
-                :
+              ) : (
                 <Icon type="arrow-up" />
-              }
+              )}
               <div
-                className={!settings.withXVS || apy.isNegative() ? 'apy-red-label' : 'apy-green-label'}
+                className={
+                  !settings.withXVS || apy.isNegative()
+                    ? 'apy-red-label'
+                    : 'apy-green-label'
+                }
               >
                 {formatApy(apy)}
               </div>
@@ -142,13 +146,17 @@ function BorrowMarket({ borrowedAssets, remainAssets, settings }) {
         return {
           children: (
             <div className="apy-content">
-              {!settings.withXVS || apy.isNegative() ?
+              {!settings.withXVS || apy.isNegative() ? (
                 <Icon type="arrow-down" style={{ color: '#f9053e' }} />
-                :
+              ) : (
                 <Icon type="arrow-up" />
-              }
+              )}
               <div
-                className={!settings.withXVS || apy.isNegative() ? 'apy-red-label' : 'apy-green-label'}
+                className={
+                  !settings.withXVS || apy.isNegative()
+                    ? 'apy-red-label'
+                    : 'apy-green-label'
+                }
               >
                 {formatApy(apy)}
               </div>

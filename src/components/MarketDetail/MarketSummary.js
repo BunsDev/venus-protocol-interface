@@ -6,8 +6,8 @@ import { withRouter } from 'react-router-dom';
 import BigNumber from 'bignumber.js';
 import commaNumber from 'comma-number';
 import { connectAccount } from 'core';
-import { vtokenDecimals } from '../../config';
 import * as constants from 'utilities/constants';
+import { vtokenDecimals } from '../../config';
 
 const MarketSummaryWrapper = styled.div`
   .label {

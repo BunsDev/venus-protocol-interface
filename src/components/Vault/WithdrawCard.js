@@ -96,7 +96,9 @@ function WithdrawCard({
                 <div className="card-title">
                   <span>
                     {stakedToken.toUpperCase()} Staked:{' '}
-                    {userEligibleStakedAmount.div(stakedTokenDecimal).toFixed(4)}
+                    {userEligibleStakedAmount
+                      .div(stakedTokenDecimal)
+                      .toFixed(4)}
                   </span>
                   <Icon
                     type="history"
@@ -118,7 +120,9 @@ function WithdrawCard({
                         const maxValue = userEligibleStakedAmount
                           .div(stakedTokenDecimal)
                           .dp(4, 1);
-                        setWithdrawAmount(value.gt(maxValue) ? maxValue : value);
+                        setWithdrawAmount(
+                          value.gt(maxValue) ? maxValue : value
+                        );
                       }}
                       thousandSeparator
                       allowNegative={false}

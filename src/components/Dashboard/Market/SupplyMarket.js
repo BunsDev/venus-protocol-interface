@@ -109,9 +109,7 @@ function SupplyMarket({ settings, suppliedAssets, remainAssets }) {
           children: (
             <div className="apy-content">
               <Icon type="arrow-up" />
-              <div className="apy-green-label">
-                {formatApy(apy)}
-              </div>
+              <div className="apy-green-label">{formatApy(apy)}</div>
             </div>
           )
         };
@@ -183,9 +181,7 @@ function SupplyMarket({ settings, suppliedAssets, remainAssets }) {
           children: (
             <div className="apy-content">
               <Icon type="arrow-up" />
-              <div className="apy-green-label">
-                {formatApy(apy)}
-              </div>
+              <div className="apy-green-label">{formatApy(apy)}</div>
             </div>
           )
         };

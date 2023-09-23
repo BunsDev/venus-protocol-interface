@@ -7,7 +7,6 @@ import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import BigNumber from 'bignumber.js';
 import MainLayout from 'containers/Layout/MainLayout';
-import { connectAccount, accountActionCreators } from 'core';
 import { promisify } from 'utilities';
 import * as constants from 'utilities/constants';
 import OverviewChart from 'components/Basic/OverviewChart';
@@ -16,6 +15,7 @@ import MarketInfo from 'components/MarketDetail/MarketInfo';
 import MarketSummary from 'components/MarketDetail/MarketSummary';
 import InterestRateModel from 'components/MarketDetail/InterestRateModel';
 import { useWeb3React } from '@web3-react/core';
+import { connectAccount, accountActionCreators } from '../../core';
 import { useMarkets } from '../../hooks/useMarkets';
 
 const MarketDetailWrapper = styled.div`

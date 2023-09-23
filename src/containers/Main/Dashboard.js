@@ -12,8 +12,8 @@ import BorrowLimit from 'components/Dashboard/BorrowLimit';
 import Overview from 'components/Dashboard/Overview';
 import WalletBalance from 'components/Dashboard/WalletBalance';
 import Market from 'components/Dashboard/Market';
-import { connectAccount, accountActionCreators } from 'core';
 import { Row, Column } from 'components/Basic/Style';
+import { connectAccount, accountActionCreators } from '../../core';
 
 const DashboardWrapper = styled.div`
   height: 100%;

@@ -114,12 +114,11 @@ export const currencyFormatter = labelValue => {
 };
 
 export const formatApy = apy => {
-  let apyBN = getBigNumber(apy);
+  const apyBN = getBigNumber(apy);
   if (apyBN.absoluteValue().isLessThan(100000000)) {
     return `${apyBN.dp(2, 1).toString(10)}%`;
-  } else {
-    return 'Infinity';
   }
+  return 'Infinity';
 };
 
 /**

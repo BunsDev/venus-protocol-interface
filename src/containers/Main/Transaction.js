@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 import commaNumber from 'comma-number';
-import { Row, Col, Pagination } from 'antd';
+import { Row, Col, Pagination, Select } from 'antd';
 import styled from 'styled-components';
 import { bindActionCreators } from 'redux';
 import { connectAccount, accountActionCreators } from 'core';
 import MainLayout from 'containers/Layout/MainLayout';
 import { Label } from 'components/Basic/Label';
-import { Select } from 'antd';
 import { promisify } from 'utilities';
 import moment from 'moment';
 import arrowRightImg from 'assets/img/arrow-right.png';
@@ -308,11 +307,11 @@ function Transaction({ getTransactionHistory }) {
     minutes %= 60;
     if (days > 0) {
       return `${days} days ago`;
-    } else if (hours > 0) {
-      return `${hours} hours ago`;
-    } else {
-      return `${minutes} mins ago`;
     }
+    if (hours > 0) {
+      return `${hours} hours ago`;
+    }
+    return `${minutes} mins ago`;
   };
 
   return (
@@ -401,10 +400,12 @@ function Transaction({ getTransactionHistory }) {
                           '_blank'
                         );
                       }}
-                    >{`${item.transactionHash.slice(
-                      0,
-                      6
-                    )}...${item.transactionHash.slice(-6)}`}</p>
+                    >
+                      {`${item.transactionHash.slice(
+                        0,
+                        6
+                      )}...${item.transactionHash.slice(-6)}`}
+                    </p>
                   </Col>
                   <Col xs={{ span: 24 }} lg={{ span: 2 }} className="block">
                     <p className="mobile-label">Block</p>

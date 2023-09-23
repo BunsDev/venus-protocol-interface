@@ -238,9 +238,7 @@ function WithdrawTab({ asset, changeTab, onCancel, setSetting }) {
               />
               <span>Distribution APY</span>
             </div>
-            <span>
-              {formatApy(asset.xvsSupplyApy)}
-            </span>
+            <span>{formatApy(asset.xvsSupplyApy)}</span>
           </div>
           <div className="description">
             <div className="flex align-center">

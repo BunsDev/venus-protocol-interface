@@ -5,14 +5,14 @@ import { Input, Form, Dropdown, Menu } from 'antd';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 import { bindActionCreators } from 'redux';
-import { connectAccount, accountActionCreators } from 'core';
 import MainLayout from 'containers/Layout/MainLayout';
-import { promisify } from 'utilities';
 import Button from '@material-ui/core/Button';
 import LoadingSpinner from 'components/Basic/LoadingSpinner';
 import toast from 'components/Basic/Toast';
-import * as constants from 'utilities/constants';
 import { Row, Column } from 'components/Basic/Style';
+import * as constants from '../../utilities/constants';
+import { promisify } from '../../utilities';
+import { connectAccount, accountActionCreators } from '../../core';
 import { BASE_BSC_SCAN_URL } from '../../config';
 import { getVaiTokenAddress } from '../../utilities/addressHelpers';
 

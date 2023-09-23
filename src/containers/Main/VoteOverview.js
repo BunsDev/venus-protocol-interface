@@ -10,7 +10,6 @@ import BigNumber from 'bignumber.js';
 import { withRouter } from 'react-router-dom';
 import { Icon, Tooltip } from 'antd';
 import Button from '@material-ui/core/Button';
-import { connectAccount, accountActionCreators } from 'core';
 import MainLayout from 'containers/Layout/MainLayout';
 import ProposalInfo from 'components/Vote/VoteOverview/ProposalInfo';
 import ProposalUser from 'components/Vote/VoteOverview/ProposalUser';
@@ -21,6 +20,7 @@ import { promisify } from 'utilities';
 import toast from 'components/Basic/Toast';
 import { Row, Column } from 'components/Basic/Style';
 import { useWeb3React } from '@web3-react/core';
+import { connectAccount, accountActionCreators } from '../../core';
 import { useToken, useGovernorBravo } from '../../hooks/useContract';
 
 const VoteOverviewWrapper = styled.div`

@@ -7,12 +7,12 @@ import commaNumber from 'comma-number';
 import { Row, Col, Icon } from 'antd';
 import styled from 'styled-components';
 import { bindActionCreators } from 'redux';
-import { connectAccount, accountActionCreators } from 'core';
 import MainLayout from 'containers/Layout/MainLayout';
 import { promisify } from 'utilities';
 
 import * as constants from 'utilities/constants';
 import { currencyFormatter, formatApy } from 'utilities/common';
+import { connectAccount, accountActionCreators } from '../../core';
 import { useMarkets } from '../../hooks/useMarkets';
 
 const MarketWrapper = styled.div`
